@@ -46,5 +46,6 @@ jobs:
 
       - name: Run 
         run: |
-           salloc -N 1 --ntasks-per-node 1 --cpus-per-task 128
-           bash run_xhplhip.sh
+           #salloc -N 1 --ntasks-per-node 1 --cpus-per-task 128
+           pwd
+           bash ./run_xhplhip.sh
