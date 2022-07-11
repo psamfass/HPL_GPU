@@ -12,7 +12,7 @@
 # Setup of execution environment
 #SBATCH --get-user-env
 #SBATCH --exclusive
-#SBATCH --partition=MI250-ubuntu20
+#SBATCH --partition=MI250
 # Resource configuration
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=8
