@@ -47,5 +47,5 @@ jobs:
       - name: Run 
         run: |
            cd build
-           sbatch --wait ./single_node_slurm.sh
+           sbatch --wait ./slurm_single_node.sh
            cat hpl*.out
