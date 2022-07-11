@@ -58,3 +58,8 @@ jobs:
         run: |
            cd build
            cat hpl*.out
+      - name: Output HPL.out
+        if: always()
+        run: |
+           cd build
+           cat HPL.out
