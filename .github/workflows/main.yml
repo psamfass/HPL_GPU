@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  buildAndRun:
     # The type of runner that the job will run on
     runs-on: self-hosted
 
@@ -27,7 +27,7 @@ jobs:
 
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Build
         run: |
             module load openblas
             module load mpi
@@ -43,17 +43,8 @@ jobs:
             export CPLUS_INCLUDE_PATH=$MPI_DIR/include
             
             mkdir build && cd build && cmake .. && make
-  run:
-    # The type of runner that the job will run on
-    runs-on: self-hosted
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-      
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Run 
         run: |
            salloc -N 1 --ntasks-per-node 1 --cpus-per-task 128
            bash run_xhplhip.sh
