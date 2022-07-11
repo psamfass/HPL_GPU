@@ -49,6 +49,8 @@ jobs:
            cd build
            sbatch --wait ./slurm_single_node.sh
       - name: Output stderr
+        run: |
            cat hpl*.err
       - name: Output stdout
+        run: |
            cat hpl*.out
