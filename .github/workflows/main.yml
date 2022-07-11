@@ -46,7 +46,6 @@ jobs:
 
       - name: Run 
         run: |
-           #salloc -N 1 --ntasks-per-node 1 --cpus-per-task 128
-           pwd
            cd build
-           bash ./run_xhplhip.sh
+           sbatch --wait ./single_node_slurm.sh
+           cat hpl*.out
