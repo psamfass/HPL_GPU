@@ -51,8 +51,10 @@ jobs:
       - name: Output stderr
         if: always()
         run: |
+           cd build
            cat hpl*.err
       - name: Output stdout
         if: always()
         run: |
+           cd build
            cat hpl*.out
