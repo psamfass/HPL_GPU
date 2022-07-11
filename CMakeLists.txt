@@ -49,6 +49,8 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/scripts/mpirun_xhplhip.sh
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/scripts/run_xhplhip.sh
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/scripts/slurm_single_node.sh
+     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/scripts/hostfile
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 # don't need MPI C++ bindings, now deprecated
