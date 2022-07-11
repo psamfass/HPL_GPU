@@ -48,4 +48,5 @@ jobs:
         run: |
            cd build
            sbatch --wait ./slurm_single_node.sh
-           cat hpl*.out
+           tail -f hpl*.out
+           cat hpl*.err
